@@ -48,6 +48,6 @@ public class Main {
         // }
 
         WeatherFetcher wf = new WeatherFetcher("Bratislava");
-
+        
     }
 }

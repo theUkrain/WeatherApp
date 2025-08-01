@@ -25,7 +25,7 @@ public class WeatherFetcher {
         }
         String apiKey = props.getProperty("apiKey");
 
-        String request = "http://api.weatherapi.com/v1/forecast.json?key=" + apiKey + "q=" + cityName + 
+        String request = "http://api.weatherapi.com/v1/forecast.json?key=" + apiKey + "&q=" + cityName + 
                             "&days=5&aqi=no&alerts=no";
 
         sendRequest(request);
