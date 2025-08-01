@@ -1,0 +1,13 @@
+# Ignore IDE config files
+.idea/
+*.iml
+
+# Ignore build output
+/target/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive config
+src/main/resources/config.properties
