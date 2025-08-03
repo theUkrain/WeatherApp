@@ -1,7 +1,6 @@
 package weather_application;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -33,6 +32,7 @@ public class WeatherFetcher {
 
     public void sendRequest(String request){
         try {
+            @SuppressWarnings("deprecation")
             URL url = new URL(request);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             con.setRequestMethod("GET");
