@@ -10,10 +10,11 @@ public class WeatherParser {
     private WeatherModel weather;
 
     public WeatherParser(String jsonResponce){
-        responce = new JSONObject(jsonResponce);
         weather = new WeatherModel();
-
-        parse();
+        if(!jsonResponce.equals("_Error")){
+            responce = new JSONObject(jsonResponce);
+            parse();
+        }
     }
 
     private void parse(){

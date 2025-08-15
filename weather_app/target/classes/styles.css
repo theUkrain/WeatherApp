@@ -1,0 +1,17 @@
+#search-button{
+    -fx-pref-height: 30px;
+    -fx-pref-width: 30px;
+    -fx-min-height: 30px;
+    -fx-min-width: 30px;
+    -fx-max-height: 30px;
+    -fx-max-width: 30px;
+
+    -fx-background-radius: 15px;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+}
+
+.header-label{
+    -fx-font-size: 20px;
+}

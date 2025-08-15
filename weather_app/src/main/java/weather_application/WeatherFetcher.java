@@ -32,7 +32,6 @@ public class WeatherFetcher {
 
     public void sendRequest(String request){
         try {
-            @SuppressWarnings("deprecation")
             URL url = new URL(request);
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
             con.setRequestMethod("GET");
@@ -52,7 +51,8 @@ public class WeatherFetcher {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+            jsonResponce = "_Error";
+            // e.printStackTrace();
         }
         
     }
