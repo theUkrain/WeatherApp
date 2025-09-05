@@ -15,3 +15,14 @@
 .header-label{
     -fx-font-size: 20px;
 }
+
+/* .table-view .column-header-background {
+    visibility: hidden;
+    -fx-padding: -1em;
+}
+.table-view .column-header, 
+.table-view .filler {
+    visibility: hidden;
+    -fx-size: 0;
+    -fx-padding: 0;
+} */

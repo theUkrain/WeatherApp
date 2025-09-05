@@ -54,7 +54,7 @@ public class WeatherFetcher {
             jsonResponce = "_Error";
             // e.printStackTrace();
         }
-        
+
     }
 
     public String getResponce(){

@@ -2,42 +2,78 @@ package weather_application;
 
 public class HourClass {
     //  time
-    public String time;
-    
+    private String time;
+    public void setTime(String time) { this.time = time; }
+    public String getTime() { return time; }
+
     //  temperature
-    public double t_c;
-    public double feelslike_c;
-    public double t_f;
-    public double feelslike_f;
+    private double temperatureC;
+    public void setTemperatureC(double temp) { this.temperatureC = temp; }
+    public double getTemperatureC() { return temperatureC; }
+    private double feelTemperatureC;
+    public void setFeelTemperatureC(double temp) { this.feelTemperatureC = temp; }
+    public double getFeelTemperatureC() { return feelTemperatureC; }
+    private double temperatureF;
+    public void setTemperatureF(double temp) { this.temperatureF = temp; }
+    public double getTemperatureF() { return temperatureF; }
+    private double feelTemperatureF;
+    public void setFeelTemperatureF(double temp) { this.feelTemperatureF = temp; }
+    public double getFeelTemperatureF() { return feelTemperatureF; }
 
     //  condition
-    public String condition_text;
-    public String condition_icon;
+    private String conditionText;
+    public void setConditionText(String text) { this.conditionText = text; }
+    public String getConditionText() { return conditionText; }
+    private String conditionIcon;
+    public void setConditionIcon(String icon) { this.conditionIcon = icon; }
+    public String getConditionIcon() { return conditionIcon; }
 
     //  wind
-    public double wind_kph;
-    public double wind_mph;
-    public int wind_degree;
-    public String wind_dir;
+    private double windKph;
+    public void setWindKph(double windKph) { this.windKph = windKph; }
+    public double getWindKph() { return windKph; }
+    private double windMph;
+    public void setWindMph(double windMph) { this.windMph = windMph; }
+    public double getWindMph() { return windMph; }
+    private int windDegree;
+    public void setWindDegree(int degree) { this.windDegree = degree; }
+    public int getWindDegree() { return windDegree; }
+    private String windDir;
+    public void setWindDir(String direction) { this.windDir = direction; }
+    public String getWindDir() { return windDir; }
 
     //  humidity
-    public int humidity;
+    private int humidity;
+    public void setHumidity(int humidity) { this.humidity = humidity; }
+    public int getHumidity() { return humidity; }
 
     //  cloud
-    public int cloud;
+    private int cloud;
+    public void setCloud(int cloud) { this.cloud = cloud; }
+    public int getCloud() { return cloud; }
 
     //  rain
-    public int rain_prob;
+    private int rainProb;
+    public void setRainProb(int probability) { this.rainProb = probability; }
+    public int getRainProb() { return rainProb; }
 
     //  snow
-    public int snow_prob;
+    private int snowProb;
+    public void setSnowProb(int probability) { this.snowProb = probability; }
+    public int getSnowProb() { return snowProb; }
 
     //  visibility
-    public double vis_km;
-    public double vis_m;
+    private double visKm;
+    public void setVisKm(double visibility) { this.visKm = visibility; }
+    public double getVisKm() { return visKm; }
+    private double visM;
+    public void setVisM(double visibility) { this.visM = visibility; }
+    public double getVisM() { return visM; }
 
     //  uv
-    public double uv;
+    private double uv;
+    public void setUv(double uv) { this.uv = uv; }
+    public double getUv() { return uv; }
 
     public HourClass(){}
 
@@ -45,25 +81,25 @@ public class HourClass {
     public String toString(){
         String output = "time: " + time + "\n\n" +
                         "temperature:\n" + 
-                            "\ttemp c: " + t_c + "\n" +
-                            "\ttemp f: " + t_f + "\n" + 
-                            "\tftemp c: " + feelslike_c + "\n" + 
-                            "\tftemp f: " + feelslike_f + "\n" + 
+                            "\ttemp c: " + temperatureC + "\n" +
+                            "\ttemp f: " + temperatureF + "\n" + 
+                            "\tftemp c: " + feelTemperatureC + "\n" + 
+                            "\tftemp f: " + feelTemperatureF + "\n" + 
                         "condition:\n" + 
-                            "\tcondition text: " + condition_text + "\n" + 
-                            "\tcondition icon: " + condition_icon + "\n" + 
+                            "\tcondition text: " + conditionText + "\n" + 
+                            "\tcondition icon: " + conditionIcon + "\n" + 
                         "wind:\n" + 
-                            "\twind_kph: " + wind_kph + "\n" + 
-                            "\twind_mph: " + wind_mph + "\n" + 
-                            "\twind_degree: " + wind_degree + "\n" + 
-                            "\twind_dir: " + wind_dir + "\n" + 
+                            "\twind_kph: " + windKph + "\n" + 
+                            "\twind_mph: " + windMph + "\n" + 
+                            "\twind_degree: " + windDegree + "\n" + 
+                            "\twind_dir: " + windDir + "\n" + 
                         "humidity: " + humidity + "\n" + 
                         "cloud: " + cloud + "\n" + 
-                        "rain: " + rain_prob + "%\n" + 
-                        "snow: " + snow_prob + "%\n" + 
+                        "rain: " + rainProb + "%\n" + 
+                        "snow: " + snowProb + "%\n" + 
                         "visibility:\n" + 
-                            "\tvis_km: " + vis_km + "\n" + 
-                            "\tvis_m: " + vis_m + "\n" + 
+                            "\tvis_km: " + visKm + "\n" + 
+                            "\tvis_m: " + visM + "\n" + 
                         "uv: " + uv + "\n";
         return output;
     }

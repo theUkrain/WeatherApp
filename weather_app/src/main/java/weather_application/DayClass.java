@@ -2,49 +2,95 @@ package weather_application;
 
 public class DayClass {
     //  day
-    public String date;
+    private String date;
+    public void setDate(String date) { this.date = date; }
+    public String getDate() { return date; }
 
     //  temperature
-    public double maxt_c;
-    public double maxt_f;
-    public double mint_c;
-    public double mint_f;
-    public double avg_c;
-    public double avg_f;
+    private double maxTemperatureC;
+    public void setMaxTemperatureC(double temperature) { this.maxTemperatureC = temperature; }
+    public double getMaxTemperatureC() { return maxTemperatureC; }
+    private double maxTemperatureF;
+    public void setMaxTemperatureF(double temperature) { this.maxTemperatureF = temperature; }
+    public double getMaxTemperatureF() { return maxTemperatureF; }
+    private double minTemperatureC;
+    public void setMinTemperatureC(double temperature) { this.minTemperatureC = temperature; }
+    public double getMinTemperatureC() { return minTemperatureC; }
+    private double minTemperatureF;
+    public void setMinTemperatureF(double temperature) { this.minTemperatureF = temperature; }
+    public double getMinTemperatureF() { return minTemperatureF; }
+    private double avgTemperatureC;
+    public void setAvgTemperatureC(double temperature) { this.avgTemperatureC = temperature; }
+    public double getAvgTemperatureC() { return avgTemperatureC; }
+    private double avgTemperatureF;
+    public void setAvgTemperatureF(double temperature) { this.avgTemperatureF = temperature; }
+    public double getAvgTemperatureF() { return avgTemperatureF; }
 
     //  wind
-    public double maxwind_kph;
-    public double maxwind_mph;
+    private double maxWindKph;
+    public void setMaxWindKph(double speed) { this.maxWindKph = speed; }
+    public double getMaxWindKph() { return maxWindKph; }
+    private double maxWindMph;
+    public void setMaxWindMph(double speed) { this.maxWindMph = speed; }
+    public double getMaxWindMph() { return maxWindMph; }
 
     //  visibility
-    public double avg_vis_km;
-    public double avg_vis_m;
+    private double avgVisKm;
+    public void setAvgVisKm(double visibility) { this.avgVisKm = visibility; }
+    public double getAvgVisKm() { return avgVisKm; }
+    private double avgVisM;
+    public void setAvgVisM(double visibility) { this.avgVisM = visibility; }
+    public double getAvgVisM() { return avgVisM; }
 
     //  humidity
-    public int avg_humidity;
+    private int avgHumidity;
+    public void setAvgHumidity(int humidity) { this.avgHumidity = humidity; }
+    public int getAvgHumidity() { return avgHumidity; }
 
     //  rain
-    public int rain_prob;
+    private int rainProb;
+    public void setRainProb(int probability) { this.rainProb = probability; }
+    public int getRainProb() { return rainProb; }
 
     //  snow
-    public int snow_prob;
+    private int snowProb;
+    public void setSnowProb(int probability) { this.snowProb = probability; }
+    public int getSnowProb() { return snowProb; }
 
     //  condition
-    public String condition_text;
-    public String condition_icon;
+    private String conditionText;
+    public void setConditionText(String text) { this.conditionText = text; }
+    public String getConditionText() { return conditionText; }
+    private String conditionIcon;
+    public void setConditionIcon(String icon) { this.conditionIcon = icon; }
+    public String getConditionIcon() { return conditionIcon; }
 
     //  uv
-    public double uv;
+    private double uv;
+    public void setUv(double uv) { this.uv = uv; }
+    public double getUv() { return uv; }
 
     //  timing
-    public String sunrise;
-    public String sunset;
-    public String moonrise;
-    public String moonset;
-    public String moon_phase;
+    private String sunrise;
+    public void setSunrise(String time) { this.sunrise = time; }
+    public String getSunrise() { return sunrise; }
+    private String sunset;
+    public void setSunset(String time) { this.sunset = time; }
+    public String getSunset() { return sunset; }
+    private String moonrise;
+    public void setMoonrise(String time) { this.moonrise = time; }
+    public String getMoonrise() { return moonrise; }
+    private String moonset;
+    public void setMoonset(String time) { this.moonset = time; }
+    public String getMoonset() { return moonset; }
+    private String moonPhase;
+    public void setMoonPhase(String phase) { this.moonPhase = phase; }
+    public String getMoonPhase() { return moonPhase; }
 
     //  hourly
-    public HourClass[] hours;
+    private HourClass[] hours;
+    public void setHours(HourClass[] hours) { this.hours = hours; }
+    public HourClass[] getHours() { return hours; }
 
     public DayClass(){
         hours = new HourClass[24];
@@ -54,31 +100,31 @@ public class DayClass {
     public String toString(){
         String output = "date: " + date + "\n\n" +
                         "temperature:\n" + 
-                            "\tmaxt_c: " + maxt_c + "\n" +
-                            "\tmaxt_f: " + maxt_f + "\n" + 
-                            "\tmint_c: " + mint_c + "\n" + 
-                            "\tmint_f: " + mint_f + "\n" + 
-                            "\tavg_c: " + avg_c + "\n" + 
-                            "\tavg_f: " + avg_f + "\n" + 
+                            "\tmaxt_c: " + maxTemperatureC + "\n" +
+                            "\tmaxt_f: " + maxTemperatureF + "\n" + 
+                            "\tmint_c: " + minTemperatureC + "\n" + 
+                            "\tmint_f: " + minTemperatureF + "\n" + 
+                            "\tavg_c: " + avgTemperatureC + "\n" + 
+                            "\tavg_f: " + avgTemperatureF + "\n" + 
                         "wind:\n" + 
-                            "\tmaxwind_kph: " + maxwind_kph + "\n" + 
-                            "\tmaxwind_mph: " + maxwind_mph + "\n" + 
+                            "\tmaxwind_kph: " + maxWindKph + "\n" + 
+                            "\tmaxwind_mph: " + maxWindMph + "\n" + 
                         "visibility:\n" + 
-                            "\tavg_vis_km: " + avg_vis_km + "\n" + 
-                            "\tavg_vis_m: " + avg_vis_m + "\n" + 
-                        "humidity: " + avg_humidity + "\n" + 
-                        "rain: " + rain_prob + "\n" + 
-                        "snow: " + snow_prob + "\n" + 
+                            "\tavg_vis_km: " + avgVisKm + "\n" + 
+                            "\tavg_vis_m: " + avgVisM + "\n" + 
+                        "humidity: " + avgHumidity + "\n" + 
+                        "rain: " + rainProb + "\n" + 
+                        "snow: " + snowProb + "\n" + 
                         "condition:\n" + 
-                            "\tcondition text: " + condition_text + "\n" + 
-                            "\tcondition icon: " + condition_icon + "\n" + 
+                            "\tcondition text: " + conditionText + "\n" + 
+                            "\tcondition icon: " + conditionIcon + "\n" + 
                         "uv: " + uv + "\n" + 
                         "timing:\n" + 
                             "\tsunrise: " + sunrise + "\n" + 
                             "\tsunset " + sunset + "\n" + 
                             "\tmoonrise: " + moonrise + "\n" + 
                             "\tmoonset: " + moonset + "\n" + 
-                            "\tmoon_phase: " + moon_phase + "\n" + "hours:\n";
+                            "\tmoon_phase: " + moonPhase + "\n" + "hours:\n";
 
         for(int i=0; i<hours.length; ++i){
             output+="hour " + i + "\n" + hours[i].toString();
